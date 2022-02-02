@@ -17,10 +17,10 @@ const ResultCard = (props) => {
         </div>
       </div>
       <div className="buttonContainer">
-        <button className="addFav" onClick={() => props.addFav(props.result)}>Favorite</button>
-        <button className="comment" onClick={props.addComment}>Comment</button>
+        <button className="addFav" aria-label="Add to favorites" onClick={() => props.addFav(props.result)}>Favorite</button>
+        <button className="comment" aria-label="Add comment" onClick={props.addComment}>Comment</button>
         <CopyToClipboard text={props.url}>
-          <button className="share" onClick={(e) => {e.target.innerText = 'Copied!'; setTimeout(() => {e.target.innerText = 'Share'}, 1000) }}>Share</button>
+          <button className="share" aria-label="Share link" onClick={(e) => {e.target.innerText = 'Copied!'; setTimeout(() => {e.target.innerText = 'Share'}, 1000) }}>Share</button>
         </CopyToClipboard>
       </div>
     </article>

@@ -13,8 +13,8 @@ const Navbar = (props) => {
     <div id="nav">
       <a href="/"><img id="logo" alt="frollic-logo" src="/assets/logo.png"></img></a>
       <div id="profile-container">
-          <button id="profile-icon" onClick={props.toggleFavsPage}>
-              <img src="https://img.icons8.com/small/32/000000/gender-neutral-user.png"/>
+          <button id="profile-icon" aria-label="Login" onClick={props.toggleFavsPage}>
+              <img alt="outline of person" src="https://img.icons8.com/small/32/000000/gender-neutral-user.png"/>
           </button>
       </div>
     </div>
