@@ -3,7 +3,6 @@ const request = require("supertest");
 const app = require("../server/server.js"); // Link to your server file server/server.js
 
 
-
 //testing route integration
 describe('/search', () => {
     afterAll(() => app.close())
