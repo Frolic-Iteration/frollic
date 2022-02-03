@@ -86,11 +86,14 @@ const Sidebar = (props) => {
 
           </div>
         </div>
-        <button id="search" onClick={handleClick}>Search</button>
+        <button id="search" disable={validForm()} onClick={handleClick}>Search</button>
 
       </form>
     </aside>
   )
 };
+
+function validForm () {
+}
 
 export default connect(null, mapDispatchToProps)(Sidebar);

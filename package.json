@@ -7,7 +7,10 @@
     "start": "cross-env NODE_ENV=production nodemon server/server.js",
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "concurrently \"cross-env NODE_ENV=development nodemon server/server.js\" \"cross-env NODE_ENV=development webpack serve --open\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -56,6 +59,7 @@
     "babel-loader": "^8.2.3",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
+    "jest": "^27.4.7",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
     "supertest": "^6.2.2",
