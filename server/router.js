@@ -1,5 +1,5 @@
 const express = require('express');
-const controller = require('server/controllers/controller.js');
+const controller = require('./controllers/controller.js');
 
 const router = express.Router();
 
@@ -7,6 +7,7 @@ const router = express.Router();
 //code here  
 router.post('/search', controller.getResults, (req, res) => {
   console.log('in the router');
+  console.log(res.locals);
   res.status(200).json(res.locals);
 });
 
