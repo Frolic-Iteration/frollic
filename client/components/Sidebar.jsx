@@ -86,11 +86,15 @@ const Sidebar = (props) => {
 
           </div>
         </div>
+
         <button id="search" aria-label="Search venues" onClick={handleClick}>Search</button>
 
       </form>
     </aside>
   )
 };
+
+function validForm () {
+}
 
 export default connect(null, mapDispatchToProps)(Sidebar);

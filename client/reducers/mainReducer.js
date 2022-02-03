@@ -13,7 +13,6 @@ const mainReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case types.GET_RESULTS:
-
     return {
         ...state,
         firstRender: false,
