@@ -27,7 +27,7 @@ const ResultsContainer = (props) => {
     )
   } else if (!props.searchResults.length) {
     return (
-      <section id="splash">
+      <section id="splash" alt="background shape design">
         <h1>fun with frollic</h1>
       </section>
     )

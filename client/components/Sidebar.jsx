@@ -45,48 +45,48 @@ const Sidebar = (props) => {
           <p className="side-header">What type of locations are you looking for?</p>
           <div className="checkboxes">
             <div className="checkbox">
-            <input type="checkbox" name="galleries"></input>
-            <label htmlFor="Galleries">Art Galleries</label><br/>
+            <input type="checkbox" id="galleries"></input>
+            <label for="galleries">Art Galleries</label><br/>
             </div>
 
             <div className="checkbox">
-            <input type="checkbox" name="bars"></input>
-            <label htmlFor="Bar">Bar</label><br/>
+            <input type="checkbox" id="bars"></input>
+            <label for="bars">Bar</label><br/>
             </div>
           
             <div className="checkbox">
-            <input type="checkbox" name="coffee"></input>
-            <label htmlFor="Coffee &amp; Tea">Coffee &amp; Tea</label><br/>
+            <input type="checkbox" id="coffee"></input>
+            <label for="coffee">Coffee &amp; Tea</label><br/>
             </div>
           
             <div className="checkbox">
-            <input type="checkbox" name="desserts"></input>
-            <label htmlFor="Desserts">Desserts</label><br/>
+            <input type="checkbox" id="desserts"></input>
+            <label for="desserts">Desserts</label><br/>
             </div>
           
             <div className="checkbox">
-            <input type="checkbox" name="restaurants"></input>
-            <label htmlFor="Restaurants">Restaurants</label><br/>
+            <input type="checkbox" id="restaurants"></input>
+            <label for="restaurants">Restaurants</label><br/>
             </div>
 
             <div className="checkbox">
-            <input type="checkbox" name="movietheaters"></input>
-            <label htmlFor="Cinema">Cinema</label><br/>
+            <input type="checkbox" id="movietheaters"></input>
+            <label for="movietheaters">Cinema</label><br/>
             </div>
 
             <div className="checkbox">
-            <input type="checkbox" name="musicvenues"></input>
-            <label htmlFor="Music Venues">Music Venues</label><br/>
+            <input type="checkbox" id="musicvenues"></input>
+            <label for="musicvenues">Music Venues</label><br/>
             </div>
 
             <div className="checkbox">
-            <input type="checkbox" name="shopping"></input>
-            <label htmlFor="Shopping">Shopping</label><br/>
+            <input type="checkbox" id="shopping"></input>
+            <label for="shopping">Shopping</label><br/>
             </div>
 
           </div>
         </div>
-        <button id="search" onClick={handleClick}>Search</button>
+        <button id="search" aria-label="Search venues" onClick={handleClick}>Search</button>
 
       </form>
     </aside>
