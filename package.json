@@ -10,7 +10,10 @@
     "test": "jest --verbose"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,9 @@
     "social",
     "entertainment"
   ],
+
   "author": "Wirapa May Boonyasurat, Sankari Ayyaluru, Jiwon Chung, Julia Bakerink",
+
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Frolic-Iteration/frollic/issues"
@@ -56,6 +61,8 @@
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "babel-loader": "^8.2.3",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
