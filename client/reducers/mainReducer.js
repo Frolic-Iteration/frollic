@@ -7,22 +7,29 @@ const initialState = {
   favsPageOn: false,
   firstRender: true,
   comments: [],
+  loggedInUser: false
 };
 
 const mainReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case types.GET_RESULTS:
-    return {
+      return {
         ...state,
         firstRender: false,
         searchResults: action.payload,
+      }
+    case types.USER_LOGIN:
+
+      return {
+        ...state,
+        loggedInUser: true,
       }
     case types.ADD_FAV:
       const newFavs = state.favorites.slice();
 
       if (!state.favorites.includes(action.payload)) newFavs.push(action.payload);
-      
+
       return {
         ...state,
         favorites: newFavs,

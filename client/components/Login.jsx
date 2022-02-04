@@ -12,41 +12,41 @@ class Login extends Component {
 
     // })
 
-    handleAccountSubmit(e) {
+    handleLoginSubmit = (e) => {
         e.preventDefault();
-        let usernameInput = e.target[0];
-        let usernamePassword = e.target[1];
+        console.log(e);
+
+    };
+
+    // GET request -- send backend a username and password
+    // {valid:true} {valid:false}
+    //     axios.get('/api/login', {
+    //         params: {
+    //             username: x,
+    //             password: x
+    //         }
+    //     }
+    //     )
+    //         .then((response) => {
+    //             if (response.data) {
+
+    //             }
+    //         });
 
 
-        // GET request -- send backend a username and password
-        // {valid:true} {valid:false}
-        axios.get('/api/login', {
-            params: {
-                username: x,
-                password: x
-            }
-        }
-        )
-            .then((response) => {
-                if (response.data) {
 
-                }
-            });
-
-
-
-    }
+    // }
 
 
     render() {
         return (
-            <div className="background">
+            <div className="main-background">
                 <img src="client/assets/background-still.png"></img>
                 <div className="login-container">
                     <header>
                         <h2> Login to find accessible venues near you!</h2>
                     </header>
-                    <form onSubmit={e => this.handleAccountSubmit(e)}>
+                    <form onSubmit={handleLoginSubmit}>
                         <label for="username" />
                         <p>Username:</p>
                         <input type="text" id="username" placeholder="Enter your username" />

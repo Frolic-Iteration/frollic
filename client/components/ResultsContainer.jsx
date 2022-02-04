@@ -22,7 +22,7 @@ const ResultsContainer = (props) => {
   if (!props.searchResults.length && !props.firstRender) {
     return (
       <section id="splash">
-        <h2>Sorry, no results found matching your query. <br/>Try expanding your search radius.</h2>
+        <h2>Sorry, no results found matching your query. <br />Try expanding your search radius.</h2>
       </section>
     )
   } else if (!props.searchResults.length) {
@@ -49,7 +49,7 @@ const ResultsContainer = (props) => {
       distance={resultObj.distance}
     />
   });
-  
+
   return (
     <section id="results-container">
       <h3 id="result-word">Results: </h3>

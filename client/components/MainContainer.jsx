@@ -6,9 +6,8 @@ import Login from './Login.jsx';
 const MainContainer = () => {
     return (
         <section id="main-container">
-            {/* <Sidebar/> */}
-            <Login />
-            {/* <ResultsContainer /> */}
+            <Sidebar />
+            <ResultsContainer />
 
         </section>
     )
