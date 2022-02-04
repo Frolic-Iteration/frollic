@@ -1,4 +1,4 @@
-const db = require('server/model.js');
+const db = require('.././model.js');
 const userController = {}
 
 // create a user - POST REQUEST 
