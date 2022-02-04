@@ -1,7 +1,19 @@
 const express = require('express');
 const controller = require('./controllers/controller.js');
+const userController = require('./controllers/usercontroller.js');
 
 const router = express.Router();
+
+
+// user signup 
+app.post('/signup', userController.addNewUser, (req, res) => {
+  return res.status(200).json(res.locals);
+});
+
+// user login 
+app.post('/login', userController.verifyLogin, (req, res) => {
+  return res.status(200).json(res.locals);
+});
 
 
 //code here  
