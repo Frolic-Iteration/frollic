@@ -2,7 +2,7 @@ import * as types from '../constants/actionTypes';
 import axios from 'axios';
 
 export const getResults = (location, radius, categories) => (dispatch) => {
-  
+
   axios({
     method: 'POST',
     url: `/api/search`,
@@ -13,12 +13,36 @@ export const getResults = (location, radius, categories) => (dispatch) => {
       categories: categories,
     }
   })
-  .then((response) => {
-    dispatch({
-      type: types.GET_RESULTS,
-      payload: response.data,
+    .then((response) => {
+      dispatch({
+        type: types.GET_RESULTS,
+        payload: response.data,
+      });
     });
-  });
+};
+
+
+export const getLogin = (username, password) => (dispatch) => {
+
+  axios({
+    method: 'POST',
+    url: `/api/login`,
+    headers: { 'Content-Type': 'application/JSON' },
+    data: {
+      username: username,
+      password: password
+    }
+  })
+    .then((res) => {
+      if (res.locals.info.validLogin === true) {
+        dispatch({
+          type: types.USER_LOGIN,
+          payload: username, login
+        });
+
+      }
+
+    });
 };
 
 export const addFav = (favorite) => ({
